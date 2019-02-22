@@ -17,6 +17,9 @@ jenkins:
   Master:
     ServiceType: ClusterIP
 
+    ServiceLabels:
+      jenkins.io/kind: "jenkins"
+
     ServiceAnnotations:
       #   service.beta.kubernetes.io/aws-load-balancer-backend-protocol: https
       fabric8.io/expose: "true"
