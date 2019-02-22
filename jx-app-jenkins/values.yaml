@@ -14,6 +14,10 @@ cleanup:
     helm.sh/hook-delete-policy: hook-succeeded
 
 jenkins:
+
+  rbac:
+    install: true
+    
   Master:
     ServiceType: ClusterIP
 
