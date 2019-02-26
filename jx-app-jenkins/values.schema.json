@@ -1,0 +1,24 @@
+
+{
+  "$id": "https:/jenkins-x.io/tests/descriptionAndTitle.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Jenkins App values.yaml",
+  "type": "object",
+  "properties": {
+    "InstallPlugins": {
+      "type": "array",
+      "title": "What plugins do you want to install?",
+      "description": "The plugins to install during Jenkins master start",
+      "items": {
+        "type": "string",
+        "enum": [
+          "kubernetes:1.14.0",
+          "workflow-job:2.31",
+          "workflow-aggregator:2.6",
+          "credentials-binding:1.17",
+          "git:3.9.1"
+        ]
+      }
+    }
+  }
+}
