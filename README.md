@@ -10,4 +10,6 @@ The Jenkins App can be installed by running:
 
 `jx add app jx-app-jenkins`
 
+It will ask you what plugins you want to add to the Jenkins server when you install the app.
+
 
