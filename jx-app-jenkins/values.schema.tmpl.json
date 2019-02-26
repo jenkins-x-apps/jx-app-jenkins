@@ -1,0 +1,20 @@
+
+{
+  "$id": "https:/jenkins-x.io/tests/descriptionAndTitle.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Jenkins App values.yaml",
+  "type": "object",
+  "properties": {
+    "InstallPlugins": {
+      "type": "array",
+      "title": "What plugins do you want to install?",
+      "description": "The plugins to install during Jenkins master start",
+      "items": {
+        "type": "string",
+        "enum": [
+          "PLUGINS_INJECTED_HERE"
+        ]
+      }
+    }
+  }
+}
