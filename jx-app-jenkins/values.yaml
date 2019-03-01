@@ -1,4 +1,4 @@
-expose:
+jenkinsexpose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
@@ -6,7 +6,7 @@ expose:
     #config:
     #pathMode: "path"
 
-cleanup:
+jenkinscleanup:
   Args:
   - --cleanup
   Annotations:
