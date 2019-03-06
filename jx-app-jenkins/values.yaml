@@ -13,8 +13,53 @@ jenkinscleanup:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
 
-jenkins:
 
+jenkinstokenjob:
+  enabled: true
+  serviceaccount:
+    enabled: true
+  job:
+    enabled: true
+    annotations:
+      helm.sh/hook: post-install,post-upgrade
+      helm.sh/hook-delete-policy: hook-succeeded
+  args:
+  - "create"
+  - "jenkins"
+  - "token"
+  - "--batch-mode"
+  role:
+    enabled: true
+    rules:
+    - apiGroups:
+      - ""
+      resources:
+      - configmaps
+      - services
+      verbs:
+      - get
+      - list
+      - watch
+    - apiGroups:
+      - ""
+      resources:
+      - secrets
+      verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+    - apiGroups:
+      - jenkins.io
+      resources:
+      - environments
+      verbs:
+      - get
+      - list
+      - watch
+
+jenkins:
   rbac:
     install: true
     
