@@ -29,6 +29,9 @@ jenkinstokenjob:
   - "token"
   - "--batch-mode"
 
+  # lets use 30 minutes timeout
+  activeDeadlineSeconds: 1800
+
   # disable lifeness and readiness probes
   probe:
     path: ""
