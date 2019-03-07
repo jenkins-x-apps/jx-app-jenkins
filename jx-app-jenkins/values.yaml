@@ -28,6 +28,10 @@ jenkinstokenjob:
   - "jenkins"
   - "token"
   - "--batch-mode"
+
+  # disable lifeness and readiness probes
+  probe:
+    path: ""
   clusterrole:
     enabled: true
     rules:
