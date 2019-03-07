@@ -28,6 +28,17 @@ jenkinstokenjob:
   - "jenkins"
   - "token"
   - "--batch-mode"
+  clusterrole:
+    enabled: true
+    rules:
+    - apiGroups:
+      - ""
+      resources:
+      - namespaces
+      verbs:
+      - get
+      - list
+      - watch
   role:
     enabled: true
     rules:
