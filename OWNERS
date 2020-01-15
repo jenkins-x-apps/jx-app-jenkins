@@ -6,6 +6,8 @@ approvers:
 - garethjevans
 - i0n
 - pmuir
+- arpad9
+- adaptly-jenkins
 reviewers:
 - rawlingsj
 - jstrachan
@@ -14,3 +16,5 @@ reviewers:
 - garethjevans
 - i0n
 - pmuir
+- arpad9
+- adaptly-jenkins

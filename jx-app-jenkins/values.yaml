@@ -83,9 +83,14 @@ jenkins:
     
   Master:
     ServiceType: ClusterIP
+    AdminUser: adaptly
 
     ServiceLabels:
       jenkins.io/kind: "jenkins"
+
+    ScriptApproval:
+      - method groovy.lang.GroovyObject invokeMethod java.lang.String java.lang.Object
+      - staticMethod groovy.json.JsonOutput toJson java.lang.Object
 
     ServiceAnnotations:
       #   service.beta.kubernetes.io/aws-load-balancer-backend-protocol: https
